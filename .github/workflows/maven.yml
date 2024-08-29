@@ -10,12 +10,18 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches:
+      - main
+      - develop
+    paths:
+      - 'apps/web/**'
+      - 'apps/client-chat/**'
+  pull_request: {}
+    
 permissions:
   actions: write
   contents: read
+
 jobs:
   build:
 
